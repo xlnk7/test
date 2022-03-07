@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>7mFlex</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+
+    <style>
+        #boxes{
+		animation: transitionIn 1s;
+	}
+	@keyframes transitionIn{
+		from {
+					opacity:0;
+			transform: translate(0,10%);
+		}
+		to {
+			opacity:1;
+			transform: rotateX(0);
+		}
+	}
+       
+         .btn{
+            padding:12px 16px;
+            cursor:pointer;
+        }
+
+        .card{
+            border-radius:10px;
+        }
+        .card img{
+            border-radius:10px;
+        }
+
+        .visit{
+        min-height: 100vh;
+		width:100%;
+		background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,1)),url(images/banner1.jpeg);
+        background-position: center;
+		background-size: cover;
+        }
+
+        .center{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            text-align:center;
+        }
+         
+        
+
+        .campus{
+            width:80%;
+            margin:auto;
+            text-align:center;
+            padding-top;50px;
+        }
+        
+        .campus-col{
+            flex-basis:30%;
+            border-radius:10px;
+            margin-bottom:30px;
+            position:relative;
+            overflow:hidden;
+        }
+
+        .campus-col img{
+            width:100%;
+        }
+
+        .layer{
+            background:transparent;
+            height:100%;
+            width:100%;
+            position:absolute;
+            top:0;
+            left:0;
+            transition:1s;
+        }
+
+        .layer:hover{
+            background:rgba(0,0,0,0.7);
+        }
+
+        .layer .trans{
+            width:100%;
+            font-weight:500;
+            color:#fff;
+            font-size:26px;
+            bottom:0;
+            left:50%;
+            transform:translateX(-50%);
+            position:absolute;
+            opacity:0;
+            transition:1s;
+        }
+
+        .layer:hover .trans{
+            bottom:50%;
+            opacity:1;
+        }
+        h4{
+            color:#f8f9fa        
+        }
+        
+
+    </style>
+
+</head>
+<body>
+
+    <!--                  nav bar                    -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <a href="" class="navbar-brand text-primary">7MFLEX</a>
+       <a href="#ahmed" data-toggle="collapse" class="navbar-toggler">
+           <span class="navbar-toggler-icon"></span>
+       </a>
+       <div id="ahmed" class="collapse navbar-collapse">
+           <ul class="navbar-nav">
+               <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+               <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+               <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+           </ul>
+       </div>
+   </nav>
+
+    <!--                  MCU                    -->
+    <section class="visit">
+        <div class="center">
+            <h2 style="color:#bfbfbf">We have a whole section for MCU world.</h2>
+            <div class="btn btn-outline-primary mt-3">Visit it</div>
+        </div>
+    </section>
+
+    <!--                  Search form                    -->
+    <div class="container w-50" style="margin-top:5%">
+        <div class="row">
+            <div class="col input-group w-50">
+                <div class="input-group-prepent">
+                    <span class="input-group-text"><img src="icons/search.svg" style="height:30px;" /></span>
+                </div>
+                <input class="form-control" type="email" placeholder="Search" />
+            </div>
+        </div>
+    </div>
+
+    <!--                  Menu        -->       
+    <section class="mt-10">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups " style="position:absolute; top:10%; left:50%; transform:translate(-50%, -50%);">
+                        <div class="btn-group me-2" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-light active">Home</button>
+                            <button type="button" class="btn btn-light">Movies</button>
+                            <button type="button" class="btn btn-light">TV shows</button>
+                            <button type="button" class="btn btn-light">Animes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+       
+
+ 
+    <!--                  Cards                    -->
+    <div id="boxes" class="container" style="margin-top:7%;">
+        <h2 align="center">Most watched</h2>
+         <div class="row mt-5">
+            <div class="col-lg-4" style="">
+                <div class="rowa">
+                    <div class="campus-col">
+                        <img src="images/BW.jpg"/>
+                        <div class="layer">
+                            <div class="trans text-center" style="margin-bottom:-20%">
+                                <h4>Movie : Black Widow </br> IMDB : 6.7/10 </br> Type : Action/Adventure </br> Duration : 2h 13m</h4>
+                                <div class="btn btn-outline-primary">Watch</div>
+                                <div class="btn btn-outline-danger">Download</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="rowa">
+                    <div class="campus-col">
+                        <img src="images/demon.jpg" />
+                        <div class="layer">
+                            <div class="trans text-center" style="margin-bottom:-20%">
+                                <h4>Anime : Demon Slayer </br> IMDB : 9.6/10 </br> Type : Dark fantsy </br> Duration : 20m</h4>
+                                <div class="btn btn-outline-primary">Watch</div>
+                                <div class="btn btn-outline-danger">Download</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="rowa">
+                    <div class="campus-col">
+                        <img src="images/TBBT.jpg" />
+                        <div class="layer">
+                            <div class="trans text-center" style="margin-bottom:-20%">
+                                <h4>TV Show : The Big Bang Theory </br> IMDB : 8.1/10 </br> Type : Sictom </br> Duration : 20m</h4>
+                                <div class="btn btn-outline-primary">Watch</div>
+                                <div class="btn btn-outline-danger">Download</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="col-lg-4">
+                 <div class="rowa">
+                     <div class="campus-col">
+                         <img src="images/hannibal.jpg" />
+                         <div class="layer">
+                             <div class="trans text-center" style="margin-bottom:-20%">
+                                 <h4>TV Show : Hannibal </br> IMDB : 8.5/10 </br> Type : Drama </br> Duration : 43m</h4>
+                                 <div class="btn btn-outline-primary">Watch</div>
+                                 <div class="btn btn-outline-danger">Download</div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-4">
+                 <div class="rowa">
+                     <div class="campus-col">
+                         <img src="images/Thor.jpg" />
+                         <div class="layer">
+                             <div class="trans text-center" style="margin-bottom:-20%">
+                                 <h4>Movie : Thor Ragnarok </br> IMDB : 7.9/10 </br> Type : Action/Fantsy </br> Duration : 2h 10m</h4>
+                                 <div class="btn btn-outline-primary">Watch</div>
+                                 <div class="btn btn-outline-danger">Download</div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-4">
+                 <div class="rowa">
+                     <div class="campus-col">
+                         <img src="images/friends.jpg" />
+                         <div class="layer">
+                             <div class="trans text-center" style="margin-bottom:-20%">
+                                 <h4>TV Show : Friends </br> IMDB : 8.8/10 </br> Type : Sictom </br> Duration : 20m</h4>
+                                 <div class="btn btn-outline-primary">Watch</div>
+                                 <div class="btn btn-outline-danger">Download</div>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+
+
+
+<script src="js/popper.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
